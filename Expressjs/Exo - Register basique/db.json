@@ -1,0 +1,18 @@
+[
+  {
+    "email": "thomas@thomas.be",
+    "password": "$2b$10$2u4xjI5otYNFPVTk19ASzuDoL4htAj18Ciy0NZXgPceWNtZw0DXIi",
+    "username": "sunjinwoo",
+    "age": "42",
+    "firstname": "thomas",
+    "lastname": "thomas"
+  },
+  {
+    "email": "test@test.be",
+    "password": "$2b$10$uNLBT86sr3nM5yMOo6MI3u1EUR19HW6XT9DEDcI8i6kU4YRAAaT06",
+    "username": "tester",
+    "age": "42",
+    "firstname": "test",
+    "lastname": "TEST"
+  }
+]
