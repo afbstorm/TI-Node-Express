@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h2 Nos produits :
+    ul
+        each product in products
+            li= product.name + ' - ' + product.price + '€'
+            br
+            span= product.category
+            br

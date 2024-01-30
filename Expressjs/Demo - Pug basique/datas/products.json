@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Pomme",
+    "price": 0.89,
+    "category": "Fruits"
+  },
+  {
+    "id": 2,
+    "name": "Thomas",
+    "price": 2.50,
+    "category": "Pal"
+  },
+  {
+    "id": 3,
+    "name": "Alexis",
+    "price": 1,
+    "category": "Pal shiny"
+  },
+  {
+    "id": 4,
+    "name": "Total war : Warhammer 3",
+    "price": 49.99,
+    "category": "Jeux"
+  }
+]

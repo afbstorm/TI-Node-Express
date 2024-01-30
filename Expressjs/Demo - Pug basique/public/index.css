@@ -1,0 +1,43 @@
+html, body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+header {
+    background-color: chartreuse;
+    color: deeppink;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: chartreuse;
+    color: deeppink;
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
