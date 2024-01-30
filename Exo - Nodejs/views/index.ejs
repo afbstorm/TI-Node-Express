@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .presentation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+        }
+        .title {
+            width: 30rem;
+            color: grey;
+        }
+        .link {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="link">
+        <a href="/carre">Carrés =></a>
+    </div>
+    <div class="presentation">
+        <h2 class="title">Présentation de <%= firstname %> <%= lastname %></h2>
+        <p>Âge : <%= age %></p>
+        <p>Présentation : <%= description %></p>
+    </div>
+</body>
+</html>

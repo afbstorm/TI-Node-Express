@@ -1,0 +1,23 @@
+<!-- Création du template EJS -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .title {
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Formulaire de contact de <%= promotion %></h1>
+    <form action="/" method="post">
+        <input type="text" name="lastname" /> <br />
+        <input type="number" name="age" /> <br />
+        <input type="file" name="profileImg" /> <br />
+        <button>Save</button>
+    </form>
+</body>
+</html>
