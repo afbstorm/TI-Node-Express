@@ -64,6 +64,76 @@ const queries = {
             console.error(error);
             res.status(500).send({message: 'An error occured :', error})
         }
+    },
+
+    getUserById: async (req, res) => {
+        const { id } = req.params;
+        try {
+            const result = await pool.request()
+                .input('id', sql.Int, id)
+                .query('SELECT * FROM users WHERE id = @id')
+
+            console.log(result);
+            res.status(200).send({message: 'User retrieved'})
+        } catch (error) {
+            console.error(error);
+            res.status(500).send({message: 'An error occured :', error})
+        }
+    },
+
+    deleteUser: async (req, res) => {
+        const { id } = req.params;
+        try {
+            const result = await pool.request()
+                .input('id', sql.Int, id)
+                .query('DELETE FROM users WHERE id = @id')
+            console.log(result);
+            res.status(200).send({message: 'User deleted'})
+        } catch (error) {
+            console.error(error);
+            res.status(500).send({message: 'An error occured :', error})
+        }
+    },
+
+    updateUser: async (req, res) => {
+        const { id } = req.params;
+        const { firstname, lastname, email, newPassword, oldPassword } = req.body;
+
+        try {
+
+            const userQuery = await pool.request()
+                .input('id', sql.Int, id)
+                .query('SELECT * FROM users WHERE id = @id')
+            const user = userQuery.recordset[0];
+
+            if (!user) {
+                res.status(404).send({message: 'No such user'})
+            }
+
+            let hashedPassword = user.hashedPassword;
+            if (newPassword && oldPassword) {
+                const isPasswordValid = bcrypt.compareSync(oldPassword, hashedPassword);
+                if (!isPasswordValid) {
+                    return res.status(401).send({message: 'Invalid password'});
+                } else {
+                    hashedPassword = bcrypt.hashSync(newPassword, 10);
+                }
+            }
+
+            const result = await pool.request()
+                .input('id', sql.Int, id)
+                .input('firstname', sql.VarChar, firstname)
+                .input('lastname', sql.VarChar, lastname)
+                .input('hashedPassword', sql.VarChar, hashedPassword)
+                .input('email', sql.VarChar, email)
+                .query('UPDATE users SET firstname = @firstname, lastname = @lastname, hashedPassword = @hashedPassword, email = @email WHERE id = @id')
+
+            console.log(result);
+            res.status(200).send({message: 'User updated'})
+        } catch (error) {
+            console.error(error);
+            res.status(500).send({message: 'An error occured :', error})
+        }
     }
 }
 
