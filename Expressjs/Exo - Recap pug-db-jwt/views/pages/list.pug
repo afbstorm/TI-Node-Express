@@ -1,0 +1,11 @@
+extends ../shared/layout.pug
+
+block main
+    section
+        h2 Listes de Pals
+        ul
+            each user in userList
+                li
+                    div
+                        p
+                            a(href=`/user/${user.id}`)= user.username
