@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "email": "thomas@thomas.be",
     "password": "$2b$10$2u4xjI5otYNFPVTk19ASzuDoL4htAj18Ciy0NZXgPceWNtZw0DXIi",
     "username": "sunjinwoo",
@@ -8,6 +9,7 @@
     "lastname": "thomas"
   },
   {
+    "id": 2,
     "email": "test@test.be",
     "password": "$2b$10$uNLBT86sr3nM5yMOo6MI3u1EUR19HW6XT9DEDcI8i6kU4YRAAaT06",
     "username": "tester",

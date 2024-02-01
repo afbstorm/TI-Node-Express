@@ -34,6 +34,17 @@ const UserController = {
 
         const usersInfo = users.map(({lastname, firstname, username, age}) => ({lastname, firstname, username, age}));
         res.json(usersInfo);
+    },
+
+    getDetails: async (req, res) => {
+        const { userId } = req.params; // Recherche du userId -- /users/42 - 42 = userId dans la définiton de la route
+
+        const userDetails = await UserModel.getById(userId)
+        if (userDetails) {
+            res.json(userDetails);
+        } else {
+            res.status(404).send({message: 'User not found'});
+        }
     }
 }
 

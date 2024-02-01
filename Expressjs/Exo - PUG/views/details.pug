@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title Product detail
+        link(rel='stylesheet', href='/styles.css')
+    body
+        include header.pug
+        section#content
+            img.product-image(src=product.img, alt=product.nom)
+            h2.product-name= product.nom
+            p.product-description Description: #{product.description}
+            p.product-category Category: #{product.categorie}
+            p.product-price Price: #{product.prix}
+        include footer.pug

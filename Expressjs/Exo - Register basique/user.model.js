@@ -26,6 +26,16 @@ const UserModel = {
         return users.find(user => user.email === email);
     },
 
+    getById: async (userId) => {
+        const users = await UserModel.getUsers();
+        const user = users.find(user => user.id === parseInt(userId))
+        console.log(user)
+        if (!user) {
+            return null
+        }
+        return user
+    },
+
     // Hashing du password
     hashPassword: (password) => {
         return bcrypt.hashSync(password, 10)
