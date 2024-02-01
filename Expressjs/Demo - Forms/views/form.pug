@@ -1,0 +1,11 @@
+html
+    head
+        title Mon formulaire
+    body
+        h1 Mon formulaire
+        form(method='post' action='/submit-form')
+            label(for="name") Name :
+            input(type='text' name='name' id='name')
+            label(for='email') Email :
+            input(type='text' name='email' id='email')
+            button(type='submit') Envoyer
