@@ -1,0 +1,19 @@
+extends ../shared/layout.pug
+
+block main
+    section.user-profile-page
+        each user in userDetail
+            h2.subtitle #{title} #{user.username}
+            div.user-profile
+                p Firstname : #{user.firstname}
+                p Lastname : #{user.lastname}
+                p Email : #{user.email}
+                p Fun fact : #{user.funFact}
+            button.btn
+                a(href=`/users/update/${user.id}`) Modify #{user.username}
+
+            br
+        button.btn
+            a(href="/list") Back
+
+

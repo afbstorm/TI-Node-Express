@@ -1,0 +1,22 @@
+extends ../shared/layout.pug
+
+block main
+    section.register-page
+        h1.title #{title}
+
+        div.forms
+            form(action="/register", method="post")
+                label(for="email") Enter your email address
+                input.login-inputs(type="email", name="email" placeholder="example@mail.com")
+                label(for="password") Enter your password
+                input.login-inputs(type="password", name="password" placeholder="Don't do 1234, please")
+                label(for="firstname") Enter your firstname
+                input.login-inputs(type="firstname", name="firstname" placeholder="John..")
+                label(for="lastname") Enter your lastname
+                input.login-inputs(type="lastname", name="lastname" placeholder="Doe..")
+                label(for="funFact") State a fun fact about you
+                input.login-inputs(type="funFact", name="funFact" placeholder="Ahah...")
+                button.btn-submit(type="submit") Register
+
+            p#not-member
+                a.links(href="/login") Already a member ? Signin !

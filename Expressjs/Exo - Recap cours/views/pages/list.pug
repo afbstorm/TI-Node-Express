@@ -1,0 +1,12 @@
+extends ../shared/layout.pug
+
+block main
+    section.user-list-page
+        h2.subtitle Here's some Warhammer fantasy heroes, Order, Tide or Chaos alike !
+        ul.user-list
+            each user in userList
+                li
+                    div.users
+                        p
+                            a.links(href=`/user/${user.id}`)= user.username
+

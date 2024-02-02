@@ -1,0 +1,161 @@
+/* Add this CSS to your stylesheets */
+
+/* General Styles */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #333333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Title Styles */
+.title {
+    color: #d9360f; /* Dark red color */
+}
+
+/* Form Styles */
+.forms {
+    margin-top: 20px;
+}
+
+.login-inputs {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #666666;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.btn-submit {
+    background-color: #d9360f; /* Dark red color */
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* User List Styles */
+.user-list-page {
+    margin-top: 20px;
+}
+
+.subtitle {
+    color: #d9360f; /* Dark red color */
+}
+
+.user-list {
+    list-style: none;
+    padding: 0;
+}
+
+.users {
+    padding: 10px;
+    background-color: #333333;
+    margin-bottom: 10px;
+}
+
+/* User Profile Styles */
+.user-profile-page {
+    margin-top: 20px;
+}
+
+.user-profile {
+    background-color: #333333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Update Page Styles */
+.update-page {
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #d9360f; /* Dark red color */
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #a82c0c; /* Darker red color on hover */
+}
+/* Update this CSS in your stylesheets */
+
+/* Center the form */
+.forms-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Form Styles */
+.forms {
+    margin-top: 20px;
+    width: 40%; /* Set the form width to 40% */
+}
+
+.login-inputs {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #666666;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Button Styles */
+.btn-submit {
+    background-color: #d9360f; /* Dark red color */
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Make the button full-width */
+}
+
+/* User List Styles */
+.user-list-page {
+    margin-top: 20px;
+}
+
+.subtitle {
+    color: #d9360f; /* Dark red color */
+}
+
+.user-list {
+    list-style: none;
+    padding: 0;
+}
+
+.users {
+    padding: 10px;
+    background-color: #333333;
+    margin-bottom: 10px;
+}
+
+/* User Profile Styles */
+.user-profile-page {
+    margin-top: 20px;
+}
+
+.user-profile {
+    background-color: #333333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Update Page Styles */
+.update-page {
+    margin-top: 20px;
+}

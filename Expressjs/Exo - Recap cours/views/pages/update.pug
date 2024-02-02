@@ -1,0 +1,21 @@
+extends ../shared/layout.pug
+
+block content
+    h2.subtitle Update User Information
+        h2 COUCOU
+    div.forms-wrapper
+        form.forms(action=`/users/update/${user.id}` method="post")
+            label First Name
+            input.login-inputs(type="text" name="firstname" value=user.firstname placeholder=user.firstname)
+            label Last Name
+            input.login-inputs(type="text" name="lastname" value=user.lastname placeholder=user.lastname)
+            label Email
+            input.login-inputs(type="email" name="email" value=user.email placeholder=user.email)
+            label Fun Fact
+            input.login-inputs(type="text" name="funFact" value=user.funFact placeholder=user.funFact)
+            label oldPassword
+            input.login-inputs(type="password" name="oldPassword" value="")
+            label newPassword
+            input.login-inputs(type="password" name="newPassword" value="")
+            button(type="submit") Save
+
